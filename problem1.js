@@ -13,4 +13,19 @@ function findLargest(x) {
 
 const arr = [5, 12, 23, 45, 23, 24]
 const find = findLargest(arr)
-console.log(find);
+// console.log(find);
+
+// find biggest name friend
+
+const biggestFriend = (friends) => {
+  let biggestFriend = friends[0]
+  for (let i = 1; i < friends.length; i++){
+    if (friends[i].length > biggestFriend.length) {
+      biggestFriend=friends[i]
+    }
+  }
+  return biggestFriend;
+}
+
+const friends = ["arif", "sakil", "sakib", "asiqur", "mossaddek","alim"]
+console.log(biggestFriend(friends));
