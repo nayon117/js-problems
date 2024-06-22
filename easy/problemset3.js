@@ -25,5 +25,11 @@ function countVowels(str) {
     }
     return merged.concat(arr1.slice(i)).concat(arr2.slice(j));
   }
+
+  // Capitalize the First Letter of Each Word
+  function capitalizeFirstLetter(str) {
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  }
+  
   
   
