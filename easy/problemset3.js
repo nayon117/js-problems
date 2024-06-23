@@ -31,5 +31,9 @@ function countVowels(str) {
     return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
   }
   
+  // Generate a Random Integer Between Two Values
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
   
   
