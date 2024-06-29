@@ -6,4 +6,8 @@ function isPrime(num) {
     }
     return true;
   }
+  // Get Unique Values from an Array
+  function getUniqueValues(arr) {
+    return [...new Set(arr)];
+  }
   
