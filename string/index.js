@@ -48,17 +48,26 @@ const countWords = (str) =>{
 // console.log(countWords('hello world its me'))
 
 // Replace All Vowels with a Specific Character
+
+// path 1 
+
+// const replaceVowels = (str,char) =>{
+//     let vowels = 'aeiouAEIOU'
+//     let result = ''
+//     for(let c of str){
+//         if(vowels.includes(c)){
+//            result += char
+//         }else{
+//             result += c
+//         }
+//     }
+//     return result 
+// }
+
+// path 2 
 const replaceVowels = (str,char) =>{
-    let vowels = 'aeiouAEIOU'
-    let result = ''
-    for(let c of str){
-        if(vowels.includes(c)){
-           result += char
-        }else{
-            result += c
-        }
-    }
-    return result 
+    return str.replace(/[aeiouAEIOU]/g , char)
 }
+
 
 console.log(replaceVowels("hello", "*")); // Output: h*ll*
