@@ -37,7 +37,7 @@ function createStudent(name, age, marks) {
 }
 
 let student = createStudent("Bob", 20, { math: 80, english: 75, science: 85 });
-console.log(student.getAverageMarks()); // Output: 80
+// console.log(student.getAverageMarks()); // Output: 80
 
 // Problem 3: Working with Object Methods
 function listProperties(obj) {
@@ -51,5 +51,16 @@ function listProperties(obj) {
 }
 
 let car = { brand: "Toyota", model: "Camry", year: 2020 };
-console.log(listProperties(car)); 
+// console.log(listProperties(car)); 
 // Output: ["brand: Toyota", "model: Camry", "year: 2020"]
+
+
+// Problem 4: Count Properties in an Object
+
+function countProperties(obj) {
+  const property = Object.keys(obj);
+  return property.length;
+}
+
+let animal = { species: "Dog", name: "Buddy", age: 5 };
+console.log(countProperties(animal)); // Output: 3
