@@ -56,7 +56,20 @@ function sumEvenNumbers(arr) {
     return sum;
 }
 
-console.log(sumEvenNumbers([1, 2, 3, 4, 5])); // Output: 6
+// console.log(sumEvenNumbers([1, 2, 3, 4, 5])); // Output: 6
+
+// Higher-Order Functions
+
+function higherOrder(fn) {
+    return fn();
+}
+
+function sayHello() {
+    return "Hello, world!";
+}
+
+console.log(higherOrder(sayHello)); // Output: "Hello, world!"
+
 
 
 
