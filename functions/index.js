@@ -68,7 +68,57 @@ function sayHello() {
     return "Hello, world!";
 }
 
-console.log(higherOrder(sayHello)); // Output: "Hello, world!"
+// console.log(higherOrder(sayHello)); // Output: "Hello, world!"
+
+
+// Problem 6: Filter Out Even Numbers
+const filterEvenNumbers = (arr) =>arr.filter(num =>num%2===0)
+
+console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6])); // Output: [2, 4, 6]
+
+
+// Problem 2: Calculate the Sum of an Array
+
+const sumArray = (arr) =>{
+    return arr.reduce((acc,num)=>acc+num,0)
+}
+// console.log(sumArray([1, 2, 3, 4, 5])); // Output: 15
+
+// Problem 3: Create a Multiplier Function
+
+const createMultiplier = (n) =>{
+    return (x)=>{
+        return x * n
+    }
+}
+
+const double = createMultiplier(2);
+// console.log(double(5)); // Output: 10
+
+// Problem 4: Square All Numbers
+
+const squareNumbers =(arr)=>arr.map(num=>num*num)
+
+// console.log(squareNumbers([1, 2, 3, 4])); // Output: [1, 4, 9, 16]
+
+// Problem 5: Find Strings with Specific Length
+
+const filterByLength = (arr,n) =>{
+    return arr.filter(str=>str.length===n)
+}
+
+
+// console.log(filterByLength(["apple", "banana", "pear", "plum"], 4)); // Output: ["pear", "plum"]
+
+
+// Problem 6: Convert Array of Strings to Uppercase
+
+const toUpperCaseArray = (arr) => arr.map(str=>str.toUpperCase())
+
+
+// console.log(toUpperCaseArray(["apple", "banana", "pear"])); // Output: ["APPLE", "BANANA", "PEAR"]
+
+
 
 
 
