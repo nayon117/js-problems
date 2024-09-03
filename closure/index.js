@@ -6,3 +6,9 @@ function outer() {
     inner();
 }
 outer(); // Output: "I am outside!"
+
+function multiplyBy(n) {
+    return function (x) {
+        return n * x;
+    };
+}
