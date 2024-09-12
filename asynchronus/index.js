@@ -20,3 +20,21 @@ function performAsyncTasks() {
         results.forEach((result) => console.log(result));
     });
 }
+
+
+function chainPromises() {
+    new Promise((resolve) => {
+        setTimeout(() => resolve("First promise resolved"), 1000);
+    })
+        .then((result) => {
+            console.log(result);
+            return new Promise((resolve) => setTimeout(() => resolve("Second promise resolved"), 2000));
+        })
+        .then((result) => {
+            console.log(result);
+            return new Promise((resolve) => setTimeout(() => resolve("Third promise resolved"), 3000));
+        })
+        .then((result) => {
+            console.log(result);
+        });
+}
