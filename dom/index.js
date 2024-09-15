@@ -12,3 +12,9 @@ function addTodoItem() {
     newItem.appendChild(deleteButton);
     document.getElementById('todoList').appendChild(newItem);
 }
+
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = "lightblue";
+}
+
+document.getElementById('colorButton').addEventListener('click', changeBackgroundColor);
