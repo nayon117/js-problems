@@ -18,3 +18,24 @@ function changeBackgroundColor() {
 }
 
 document.getElementById('colorButton').addEventListener('click', changeBackgroundColor);
+
+
+// validate form 
+function validateForm() {
+    const email = document.getElementById('emailInput').value;
+    const name = document.getElementById('nameInput').value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name === "" || email === "") {
+        alert("All fields are required!");
+        return false;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert("Invalid email address!");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
